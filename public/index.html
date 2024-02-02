@@ -10,6 +10,7 @@
     <meta name="keywords" content="TikTok,Live,Livestream,Chat,Reader,Scraper,Tracker,tiktok.com,broadcast,api,library,node,node.js,javascript">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -29,24 +30,39 @@
             }
         }
     </script>
+    <style>/*tr{display: none;}*/</style>
 </head>
-<body>
-    <div class="head">
+<body style="background-color: #000;">
+    <!--
+    <div class="container" style="height: 1000px;">
+        <div class="maindiv">
+            <div class="row align-items-center">
+                <ul class="list-group col" id="nameslist" >
+                    <li class="list-group-item list-group-item-danger">السلام عليكم</li>
+                    <li class="list-group-item list-group-item-warning">بسم الله الرحمن الرحيم</li>
+                    <li class="list-group-item list-group-item-secondary">سبحان الله</li>
+                </ul>
+            </div>
+        </div>
+    </div>   --> 
+    <div class="head" style="display: none;">
         <h1>TikTok LIVE Chat Reader</h1>
-        <span class="subTitle">Source: <a href="https://github.com/zerodytrash/TikTok-Chat-Reader">https://github.com/zerodytrash/TikTok-Chat-Reader</a></span>      
+        <span class="subTitle">Source: <a href="https://github.com/lazharlazhar/TikTok-Chat-Reader">https://github.com/lazharlazhar/TikTok-Chat-Reader</a></span>      
     </div>
 
-    <div>
+    <div style="display: none;">
         A chat reader for <a href="https://www.tiktok.com/live">TikTok LIVE</a> utilizing <a href="https://github.com/zerodytrash/TikTok-Live-Connector">TikTok-Live-Connector</a> and <a href="https://socket.io/">Socket.IO</a> to forward the data to the client. More Tools available at <a href="https://tikfinity.zerody.one/" target="_blank">TikFinity</a>.
     </div>
-
+    <div class="container">
+        <div class="maindiv">
+            <div class="row align-items-center">
     <div class="inputFields">
-        <p>Enter the <b>@username</b> of a user who is currently live:</p>
-        <input type="text" id="uniqueIdInput">
+        <p style="display: none;">Enter the <b>@username</b> of a user who is currently live:</p>
+        <input type="text" id="uniqueIdInput" value="housssam.1">
         <input type="button" id="connectButton" value="connect">
-        <a href="#" onclick="generateOverlay()">Generate Overlay URL</a>
-    </div>
-
+        <a href="#" onclick="generateOverlay()">G</a>
+    </div></div></div></div>
+    <div id="t0012">
     <table class="splitstatetable">
         <tr>
             <td>
@@ -72,5 +88,39 @@
             </td>
         </tr>
     </table>
+    </div>
+    <div class="container">
+        <div class="maindiv">
+            <div class="row align-items-center">
+                <img src="unnamed.png" class="col">
+            </div>
+            <div class="row align-items-center">
+                <img  src="Untitled-1.png" class="col">
+            </div>
+            <div class="row align-items-center"></div>
+            
+            <div class="row align-items-center">
+                <button type="button" id="b_loveresult" class="btn btn-warning">قائمة المميزين:</button>
+            </div>
+            <div class="row align-items-center">
+                <ul class="list-group col" id="nameslist" >
+                    <li class="list-group-item list-group-item-danger">هناء وبهاء الدين 93%</li>
+                    <li class="list-group-item list-group-item-warning">سلسبيل وأسامة 91%</li>
+                    <li class="list-group-item list-group-item-secondary">أيوب ورتاج 90%</li>
+                </ul>
+            </div>
+            <div class="row align-items-center">
+                <p class="obss">* قوموا بدعم اللايف حتى تزيدوا من فرصة الدخول لقائمة المميزين </p>
+            </div>
+            <div class="row align-items-center">
+                <select name="names" size="2" id="nameslist2" class="col">
+                    <option value="1">الاسم 1 والاسم2</option>
+                    <option value="1">الاسم1 والاسم2</option>
+                    <option value="1">الحمد لله</option>
+                    <option value="1">لا إله إلا الله</option>
+                </select>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

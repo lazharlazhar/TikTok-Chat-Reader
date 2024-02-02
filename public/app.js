@@ -70,7 +70,33 @@ function generateUsernameLink(data) {
 function isPendingStreak(data) {
     return data.giftType === 1 && !data.repeatEnd;
 }
+function testresultt(twonames) {
+    //let twonames = "محمد  و أيوب";
+    //let twonamessplited = twonames.split("");
+    let testresult = 0;
 
+
+    //const arabicwords =["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ك", "ل", "م", "ن", " ", "ه", "و", "ا", "ي", "ؤ", "ى", "آ", "ؤ", "ة", "إ", "ء"];
+    if (twonames.length<7){return 0;}
+    if (twonames.length>20){return 0;}
+
+    if (!/\u0648/.exec(twonames)){return 0;}
+    //if (!twonames.includes("و")){return 0;}
+    
+    let gg = twonames.split("");
+        for (let i=0; i<gg.length; i++){
+             if (!gg[i].match(/[\u0600-\u06FF]/) && gg[i].match(/[^ ]+/g)){return 0;}
+             testresult += twonames.charCodeAt(gg[i]);
+        }
+
+
+    //for (let i=0; i<twonames.length; i++){
+    //     testresult += arabicwords.indexOf(twonames[i]);
+   // }
+    //testresult = twonames.length;
+    testresult = testresult % 100;
+    if (testresult<50){testresult+=50;} return testresult;
+    }
 /**
  * Add a new message to the chat container
  */
@@ -92,6 +118,24 @@ function addChatItem(color, data, text, summarize) {
             </span>
         </div>
     `);
+    let twonames = sanitize(text);
+    let tres = testresultt(twonames);
+    let pers = data.uniqueId;
+    if (tres && pers != "sabrinabenhebri"){
+        var option = document.createElement("option");
+        option.text = twonames + " " + tres+ " %";
+        var select = document.getElementById("nameslist2");
+        select.insertBefore(option, select.children[0]);
+        };
+
+    if (tres && (pers == "sabrinabenhebri")){
+        var option2 = document.createElement("li");
+        option2.innerHTML = twonames + " " + tres+ " %";
+        option2.className = "list-group-item";
+        var select2 = document.getElementById("nameslist");
+        select2.removeChild(select2.lastElementChild);
+        select2.insertBefore(option2, select2.children[0]);
+        };
 
     container.stop();
     container.animate({
