@@ -1,0 +1,190 @@
+Body {
+  Margin: 0;
+  Font-family: “Playfair Display”, serif;
+  Padding: 0 15px;
+}
+H1 {
+  Font-size: 50px;
+  Line-height: 54px;
+  Text-align: center;
+  Margin: 100px auto 60px;
+  Max-width: 600px;
+}
+
+/*Chosen style*/
+.chosen-wrapper {
+  Margin: 0 auto 25px;
+  Max-width: 400px;
+  Position: relative;
+  &:after {
+    Pointer-events: none;
+    Content: “”;
+    Position: absolute;
+    Top: 32px;
+    Right: 20px;
+    Width: 0;
+    Height: 0;
+    Border-left: 6px solid transparent;
+    Border-right: 6px solid transparent;
+    Border-top: 8px solid rgba(0, 0, 0, 0.5);
+    Transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 9;
+  }
+  &.is-active {
+    &:after {
+      Border-top: 8px solid rgba(0, 0, 0, 1);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      Transform: rotate(180deg);
+    }
+  }
+  .chosen-container {
+    .chosen-single {
+      Border-radius: 0;
+      Height: 70px;
+      Border: solid 2px #d9d9d9;
+      Background: #fff;
+      Font-size: 22px;
+      Color: rgba(0, 0, 0, 0.5);
+      Padding: 0 30px;
+      Line-height: 66px;
+      Transition: all 0.3s ease;
+      Box-shadow: none;
+      Background: #fff;
+      B {
+        Display: none !important;
+      }
+      Span {
+        Letter-spacing: 0;
+        Padding: 0;
+        Line-height: inherit;
+      }
+    }
+    &.chosen-with-drop {
+      .chosen-single {
+        Border-width: 2px 2px 1px;
+        Border-color: #000 #000 #d9d9d9;
+        Color: #000;
+        Background-image: none;
+      }
+      .chosen-drop {
+        Opacity: 1;
+        Visibility: visible;
+        Transform: translateY(0);
+      }
+    }
+    &.chosen-container-single-nosearch {
+      .chosen-search {
+        Display: none;
+      }
+    }
+    .chosen-drop {
+      Letter-spacing: 0;
+      Border-radius: 0;
+      Box-shadow: none;
+      Border-width: 0 2px 2px;
+      Border-color: #000;
+      Margin-top: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      -o-transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      Transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      Opacity: 0;
+    }
+    .chosen-results {
+      Font-size: 22px;
+      Color: #000;
+      Max-height: 245px;
+      Margin: 0;
+      Padding: 0;
+      Li {
+        Padding: 16px 30px 18px;
+        Margin: 0;
+        Border-bottom: 1px solid #e5e5e5;
+        -webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -o-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        Transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        Line-height: 20px;
+        &.highlighted {
+          Background-color: #eeeeee !important;
+          Color: #000;
+          Background-image: none;
+        }
+      }
+    }
+  }
+  &--style2 {
+    &:after {
+      Right: 0;
+    }
+    &:before {
+      Content: “”;
+      Width: 0;
+      Border-top: 2px solid #000;
+      Position: absolute;
+      Left: 0;
+      Bottom: 0;
+      z-index: 1;
+      transition: all 0.2s cubic-bezier(0.06, 1, 0.89, 0.85);
+    }
+    &.is-active {
+      &:before {
+        Width: 100%;
+      }
+    }
+    .chosen-container {
+      .chosen-single {
+        Border-width: 0 0 2px;
+        Padding: 0;
+      }
+      &.chosen-with-drop {
+        .chosen-single {
+          Border-width: 0 0 2px;
+        }
+        .chosen-drop {
+          Opacity: 1;
+          Visibility: visible;
+          Transform: translateY(5px);
+        }
+      }
+      .chosen-drop {
+        Border-color: #d9d9d9;
+        Border-top: 2px solid #d9d9d9;
+      }
+      .chosen-results {
+        Li {
+          Padding: 16px 15px 18px;
+        }
+      }
+    }
+  }
+}
+
+/*ScrollBox style*/
+.nicescroll-rails {
+  Border-left: 1px solid #d9d9d9;
+  Transform: translate(-2px);
+  Top: 0 !important;
+  .nicescroll-cursors {
+    Width: 6px !important;
+    Margin-right: 2px;
+  }
+}
+
+.link {
+  Position: absolute;
+  Left: 0;
+  Bottom: 0;
+  Padding: 20px;
+  A {
+    Display: flex;
+    Align-items: center;
+    Text-decoration: none;
+    Color: #000;
+  }
+  .fa {
+    Font-size: 28px;
+    Margin-right: 8px;
+    Color: #000;
+  }
+}
+

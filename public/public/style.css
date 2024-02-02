@@ -1,0 +1,198 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    direction: rtl;
+    background-color: #000;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a {
+    color: #58a6ff;
+}
+
+.head {
+    margin-bottom: 15px;
+}
+
+.subTitle {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.usernamelink {
+    color: #18508f;
+    text-decoration: none;
+}
+
+#roomUserText {
+    width: 100%;
+    text-align: right;
+}
+
+#roomStats {
+    width: 100%;
+    text-align: right;
+}
+
+#roomStats b {
+    margin-right: 20px;
+}
+
+.splitchattable, .splitstatetable {
+    width: 100%;
+}
+
+.splitstatetable td {
+    width: 50%;
+}
+
+.containerheader {
+    text-align: center;
+}
+
+.chatcontainer, .giftcontainer, .eventcontainer {
+    overflow-y: scroll;
+    height: calc(100vh - 240px);
+    word-wrap: break-word;
+}
+
+.eventcontainer {
+    height: calc(100vh - 90px);
+}
+
+.chatcontainer {
+    min-width: 400px;
+    max-width: calc(100vw - 430px);
+}
+
+.giftcontainer {
+    min-width: 400px;
+}
+
+.miniprofilepicture {
+    height: 20px;
+    width: 20px;
+}
+
+.gifticon {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+.div_contain{
+    margin: 40px;
+    padding: 20px;
+}
+.maindiv{
+    border: 2px;
+    color: aqua;
+    background-color: #000000;
+}
+#b_couplename{
+    background-color: chartreuse;
+
+    height: 100px;
+    text-align: center;
+}
+#b_loveresult{
+    min-width: 20%;
+    font-size: x-large;
+    margin: 20px auto;
+}
+#nameslist{
+    border: none;
+    margin: 20px auto;
+    /* background: #fff; */
+    /* border-radius: 0.25em; */
+    /* padding: 0; */
+    /* box-shadow: rgb(0 0 0 / 0%) 3px 3px 5px 0px; 
+    max-width: 60%;*/
+}
+#nameslist li{
+    padding: 5px;
+    text-align: center;
+    margin: 2px;
+    font-size: x-large;
+}
+#nameslist li:nth-child(1){
+    background-image: url("bdg1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    --bs-list-group-color: var(--bs-danger-text-emphasis);
+    --bs-list-group-bg: var(--bs-danger-bg-subtle);
+    --bs-list-group-border-color: var(--bs-danger-border-subtle);
+    --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+    --bs-list-group-action-hover-bg: var(--bs-danger-border-subtle);
+    --bs-list-group-action-active-color: var(--bs-emphasis-color);
+    --bs-list-group-action-active-bg: var(--bs-danger-border-subtle);
+    --bs-list-group-active-color: var(--bs-danger-bg-subtle);
+    --bs-list-group-active-bg: var(--bs-danger-text-emphasis);
+    --bs-list-group-active-border-color: var(--bs-danger-text-emphasis);
+}
+#nameslist li:nth-child(2){
+    background-image: url("bdg2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    --bs-list-group-color: var(--bs-warning-text-emphasis);
+    --bs-list-group-bg: var(--bs-warning-bg-subtle);
+    --bs-list-group-border-color: var(--bs-warning-border-subtle);
+    --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+    --bs-list-group-action-hover-bg: var(--bs-warning-border-subtle);
+    --bs-list-group-action-active-color: var(--bs-emphasis-color);
+    --bs-list-group-action-active-bg: var(--bs-warning-border-subtle);
+    --bs-list-group-active-color: var(--bs-warning-bg-subtle);
+    --bs-list-group-active-bg: var(--bs-warning-text-emphasis);
+    --bs-list-group-active-border-color: var(--bs-warning-text-emphasis);
+}
+#nameslist li:nth-child(3){
+    background-image: url("bdg3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    --bs-list-group-color: var(--bs-secondary-text-emphasis);
+    --bs-list-group-bg: var(--bs-secondary-bg-subtle);
+    --bs-list-group-border-color: var(--bs-secondary-border-subtle);
+    --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+    --bs-list-group-action-hover-bg: var(--bs-secondary-border-subtle);
+    --bs-list-group-action-active-color: var(--bs-emphasis-color);
+    --bs-list-group-action-active-bg: var(--bs-secondary-border-subtle);
+    --bs-list-group-active-color: var(--bs-secondary-bg-subtle);
+    --bs-list-group-active-bg: var(--bs-secondary-text-emphasis);
+    --bs-list-group-active-border-color: var(--bs-secondary-text-emphasis);
+}
+p.obss{
+    margin: 0 auto 20px auto;
+/*    max-width: 60%;*/
+}
+#nameslist2{
+    overflow: hidden;
+    
+    margin: 0 auto;
+    background: none;
+    padding-bottom: 15px;
+    border: none;
+
+    
+}
+#nameslist2 option{
+    margin: 10px 0;
+    color: white;
+    border: solid 1px;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 10px;
+    transition: width 0.2s;
+}
+#nameslist2 option:nth-child(1){
+    color: #000000;
+    background-color: #1dc51d;
+    font-size: xx-large;
+}
+#t0012 *{
+    width: 0;
+    height: 0;
+}

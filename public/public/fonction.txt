@@ -1,0 +1,18 @@
+    //let twonames = "محمد  و أيوب";
+    let testresult = 0;
+    const arabicwords =["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ك", "ل", "م", "ن", " ", "ه", "و", "ا", "ي", "ؤ", "ى", "آ", "ؤ", "ة", "إ", "ء"];
+    //if (twonames.length<7){return 0;}
+    //if (twonames.length>20){return 0;}
+    if (!twonames.includes("و")){return 0;}
+    
+    for (let i=0; i<twonames.length; i++){
+        if (!arabicwords.includes(twonames[i]))
+        {return 0;}
+         }
+    
+    for (let i=0; i<twonames.length; i++){
+         testresult += arabicwords.indexOf(twonames[i]);
+    }
+    testresult = testresult % 100;
+    if (testresult<50){testresult+=50; return testresult;}
+    }
