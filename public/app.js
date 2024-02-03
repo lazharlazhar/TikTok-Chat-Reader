@@ -12,7 +12,6 @@ let diamondsCount = 0;
 if (!window.settings) window.settings = {};
 
 $(document).ready(() => {
-    connect();
     $('#connectButton').click(connect);
     $('#uniqueIdInput').on('keyup', function (e) {
         if (e.key === 'Enter') {
